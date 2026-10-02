@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Rev Matching Auto — quality auto parts, fluids and accessories for cars and bikes in Jamaica.">
+  <title>Rev Matching Auto | Parts for Cars & Bikes</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="topbar">
+    <div>📍 Jamaica</div>
+    <div class="top-contact">☎ +1 (876) 555-0199 &nbsp; | &nbsp; ✉ info@revmatchingauto.com</div>
+    <div>Follow Us: <span>f</span> <span>◎</span> <span>♪</span></div>
+  </div>
+
+  <header class="header">
+    <a class="brand" href="#home" aria-label="Rev Matching Auto home">
+      <strong>REV MATCHING</strong><em>AUTO</em>
+      <small>Comfort your style</small>
+    </a>
+
+    <button class="mobile-menu" aria-label="Open menu" onclick="toggleMenu()">☰</button>
+
+    <div class="search-wrap">
+      <input id="searchInput" type="search" placeholder="Search for parts, brands, or vehicles..." oninput="searchProducts()">
+      <button onclick="searchProducts()">⌕</button>
+    </div>
+
+    <nav id="nav">
+      <a class="active" href="#home">Home</a>
+      <a href="#shop">Shop</a>
+      <a href="#categories">Categories</a>
+      <a href="#about">About Us</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="actions">
+      <button onclick="openAccount()" title="Account">♙<span>Account</span></button>
+      <button onclick="openCart()" title="Cart">🛒<span>Cart <b id="cartCount">0</b></span></button>
+    </div>
+  </header>
+
+  <main id="home">
+    <section class="hero">
+      <img src="assets/hero-showcase.png" alt="Rev Matching Auto cars and motorcycles">
+      <div class="hero-overlay">
+        <div class="eyebrow">TOP QUALITY AUTO PARTS</div>
+        <h1>FOR CARS<br><span>&amp; BIKES</span></h1>
+        <p>GENUINE PARTS &nbsp; | &nbsp; GREAT PRICES &nbsp; | &nbsp; FAST SERVICE</p>
+        <a href="#shop" class="btn yellow">SHOP NOW →</a>
+      </div>
+    </section>
+
+    <section class="section dark" id="categories">
+      <div class="section-head">
+        <h2>Shop by <span>Category</span></h2>
+        <a href="#shop">View All Categories →</a>
+      </div>
+      <div class="category-grid">
+        <button onclick="filterCategory('Engine Oils & Fluids')"><div class="cat-icon">🛢️</div><b>Engine Oils &amp; Fluids</b></button>
+        <button onclick="filterCategory('Brake Parts')"><div class="cat-icon">◉</div><b>Brake Parts</b></button>
+        <button onclick="filterCategory('Filters')"><div class="cat-icon">▤</div><b>Filters</b></button>
+        <button onclick="filterCategory('Suspension Parts')"><div class="cat-icon">⟷</div><b>Suspension Parts</b></button>
+        <button onclick="filterCategory('Engine Parts')"><div class="cat-icon">⚙</div><b>Engine Parts</b></button>
+        <button onclick="filterCategory('Bike Parts')"><div class="cat-icon">🏍</div><b>Bike Parts</b></button>
+        <button onclick="filterCategory('Car Parts')"><div class="cat-icon">🚗</div><b>Car Parts</b></button>
+        <button onclick="filterCategory('A/C & Cooling')"><div class="cat-icon">❄</div><b>A/C &amp; Cooling</b></button>
+      </div>
+    </section>
+
+    <section class="section products" id="shop">
+      <div class="section-head">
+        <h2>Featured <span>Products</span></h2>
+        <button class="text-btn" onclick="clearFilters()">View All Products →</button>
+      </div>
+      <div id="productGrid" class="product-grid"></div>
+    </section>
+
+    <section class="performance" id="about">
+      <div>
+        <p class="eyebrow">QUALITY PARTS</p>
+        <h2>REAL PERFORMANCE</h2>
+        <p>From everyday driving to high performance, we've got you covered.</p>
+      </div>
+      <div class="benefit"><b>✓</b><span>GENUINE<br>PARTS</span></div>
+      <div class="benefit"><b>◆</b><span>COMPETITIVE<br>PRICES</span></div>
+      <div class="benefit"><b>➜</b><span>FAST<br>DELIVERY</span></div>
+      <div class="benefit"><b>◉</b><span>EXPERT<br>SUPPORT</span></div>
+    </section>
+
+    <section class="promo-grid">
+      <a class="promo catalog" href="#shop"><b>BROWSE OUR<br><span>CATALOG</span></b><small>View All Products →</small></a>
+      <a class="promo whatsapp" href="https://wa.me/18765550199" target="_blank" rel="noopener"><b>CHAT WITH US<br><span>ON WHATSAPP</span></b><small>Quick questions? Need a part? Message us →</small></a>
+      <a class="promo riders" href="#contact"><b>BIKE RIDERS<br><span>WE GOT YOU!</span></b><small>Parts. Accessories. Performance.</small></a>
+    </section>
+  </main>
+
+  <footer id="contact">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">REV MATCHING <strong>AUTO</strong></div>
+        <p>Your trusted source for genuine auto parts and accessories for cars and bikes in Jamaica.</p>
+      </div>
+      <div><h3>Quick Links</h3><a href="#home">Home</a><a href="#shop">Shop</a><a href="#categories">Categories</a><a href="#about">About Us</a><a href="#contact">Contact</a></div>
+      <div><h3>Shop by Category</h3><a href="#shop">Engine Oils &amp; Fluids</a><a href="#shop">Brake Parts</a><a href="#shop">Filters</a><a href="#shop">Suspension Parts</a><a href="#shop">Bike Parts</a></div>
+      <div><h3>Contact</h3><p>Jamaica</p><p>+1 (876) 555-0199</p><p>info@revmatchingauto.com</p><a href="https://wa.me/18765550199" target="_blank" rel="noopener">WhatsApp Us</a></div>
+    </div>
+    <div class="copyright">© 2026 Rev Matching Auto. All rights reserved. <span>Privacy Policy &nbsp; | &nbsp; Terms of Service</span></div>
+  </footer>
+
+  <div id="accountModal" class="modal" onclick="closeOnBackdrop(event,'accountModal')">
+    <div class="modal-box">
+      <button class="close" onclick="closeModal('accountModal')">×</button>
+      <h2>My Account</h2>
+      <p>Sign in to view orders, saved items and account details.</p>
+      <input placeholder="Email address">
+      <input type="password" placeholder="Password">
+      <button class="btn yellow full">SIGN IN</button>
+      <p class="muted">Demo storefront — connect this page to Odoo for live customer accounts.</p>
+    </div>
+  </div>
+
+  <div id="cartModal" class="modal" onclick="closeOnBackdrop(event,'cartModal')">
+    <div class="modal-box cart-box">
+      <button class="close" onclick="closeModal('cartModal')">×</button>
+      <h2>Your Cart</h2>
+      <div id="cartItems"></div>
+      <div class="cart-total"><span>Total</span><strong id="cartTotal">J$0</strong></div>
+      <button class="btn yellow full" onclick="checkout()">CHECKOUT</button>
+    </div>
+  </div>
+
+  <a class="floating-wa" href="https://wa.me/18765550199" target="_blank" rel="noopener" aria-label="WhatsApp">◔</a>
+  <script src="script.js"></script>
+</body>
+</html>
