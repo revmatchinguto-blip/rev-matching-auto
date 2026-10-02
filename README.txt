@@ -1,1 +1,1 @@
-
+GitHub Pages only. Upload all files to the repository root. Settings → Pages → Deploy from a branch → main → / (root).
